@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+SONY_ROOT = device/sony/sumire/rootdir
+
 TARGET_KERNEL_CONFIG := aosp_kitakami_sumire_defconfig
 
 DEVICE_PACKAGE_OVERLAYS += \
@@ -31,14 +33,14 @@ $(call inherit-product-if-exists, prebuilts/chromium/webview_prebuilt.mk)
 $(call inherit-product-if-exists, vendor/google/products/gms.mk)
 
 PRODUCT_COPY_FILES += \
-    device/sony/sumire/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/sony/sumire/rootdir/system/etc/BCM4356.hcd:system/etc/firmware/BCM43xx.hcd \
-    device/sony/sumire/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    device/sony/sumire/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
-    device/sony/sumire/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/sumire/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/sumire/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/sumire/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
+    $(SONY_ROOT)/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(SONY_ROOT)/system/etc/BCM4356.hcd:system/etc/firmware/BCM43xx.hcd \
+    $(SONY_ROOT)/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
+    $(SONY_ROOT)/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
+    $(SONY_ROOT)/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    $(SONY_ROOT)/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(SONY_ROOT)/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(SONY_ROOT)/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_NAME := aosp_e6653
 PRODUCT_DEVICE := sumire
