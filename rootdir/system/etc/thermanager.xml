@@ -128,7 +128,7 @@
 	</control>
 
 	<control name="gpu">
-		<mitigation level="off"><value resource="kgsl-3d0">600000000</value></mitigation>
+		<mitigation level="off"><value resource="kgsl-3d0">630000000</value></mitigation>
 		<mitigation level="1"><value resource="kgsl-3d0">510000000</value></mitigation>
 		<mitigation level="2"><value resource="kgsl-3d0">450000000</value></mitigation>
 		<mitigation level="3"><value resource="kgsl-3d0">390000000</value></mitigation>
